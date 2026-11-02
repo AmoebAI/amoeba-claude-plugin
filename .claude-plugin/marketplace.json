@@ -1,0 +1,15 @@
+{
+  "name": "amoebai",
+  "owner": { "name": "AmoebAI", "url": "https://app.amoebai.com" },
+  "metadata": {
+    "description": "Claude plugins published by AmoebAI."
+  },
+  "plugins": [
+    {
+      "name": "amoeba",
+      "source": "./plugins/amoeba",
+      "description": "The Amoeba AI connector plus a skill that explains how to read an organization through it.",
+      "category": "productivity"
+    }
+  ]
+}

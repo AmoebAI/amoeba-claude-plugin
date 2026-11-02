@@ -1,0 +1,10 @@
+{
+  "name": "amoeba",
+  "displayName": "Amoeba AI",
+  "version": "0.1.0",
+  "description": "Connects Claude to Amoeba AI and teaches it how to read an organization's departments, spaces and explorations.",
+  "author": { "name": "AmoebAI", "url": "https://app.amoebai.com" },
+  "homepage": "https://app.amoebai.com",
+  "repository": "https://github.com/AmoebAI/amoeba-claude-plugin",
+  "keywords": ["amoeba", "decision-intelligence", "analytics", "mcp"]
+}

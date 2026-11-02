@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "amoeba": {
+      "type": "http",
+      "url": "https://app.amoebai.com/apiv1/mcp"
+    }
+  }
+}
