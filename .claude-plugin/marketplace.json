@@ -8,7 +8,7 @@
     {
       "name": "amoeba",
       "source": "./plugins/amoeba",
-      "description": "The Amoeba AI connector plus a skill that explains how to read an organization through it.",
+      "description": "The Amoeba AI connector plus skills that explain how to read an organization through it and how to hand over a department's Executive Brief.",
       "category": "productivity"
     }
   ]
