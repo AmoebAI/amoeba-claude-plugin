@@ -33,6 +33,7 @@ If `get_department_brief` is not among the connector's tools, the connector was 
 | `functions[]` | The map: each Function has `teams[]`, each team has `spaces[]`. A space is an objective: its `name`, its `trend`, sometimes a one-line `objective`, and `points` with what is `changing`, why it `matters` and how to `act`. |
 | `asOf` | The last day the brief covers. |
 | `counts` | How many objectives are progressing, stable and slipping. Objectives that were not assessed are not counted. |
+| `previous` | Only when this report has an earlier run: that run's `asOf` and `counts`. |
 
 Read these as follows:
 
@@ -40,6 +41,8 @@ Read these as follows:
 - A null `trend` means the objective was not assessed, and its `points` are empty.
 - A Function can have no teams and a team no objectives. Show them as such.
 - `brief.window` can come back with null dates. Use `asOf` for the date.
+- `period`, `detail`, `owner`, the single `space` of a measure or an item, and an objective's `objective` or any of its `points` can be missing or null. Leave that part of a line out, with its parentheses and its separator.
+- With no `previous`, say nothing about earlier briefs. It does not mean this is the first one.
 
 ## Presenting it
 
@@ -48,7 +51,7 @@ Start with the 60-second view, under these labels and in this order:
 1. The verdict, as written, with no label.
 2. **What moved.** One line per measure: `label: from → to (period)`, then `good` or `bad`. With no measures, write that none moved in this period.
 3. **To approve.** One line per decision: `title (delegateTo, by due)`.
-4. A closing line with the `asOf` date, the counts and the link to the report.
+4. A closing line with the `asOf` date, the counts and the link to the report. With a `previous`, add each count that changed since `previous.asOf`, as `slipping 2 → 3`.
 
 Then say in one line what else the brief holds, and show it only on request:
 
@@ -66,7 +69,7 @@ Keep to these rules:
 
 ## As text for Slack
 
-When the user wants to paste the brief into Slack, give this in a code block. Leave out "What moved" when there are no measures.
+When the user wants to paste the brief into Slack, give this in a code block. Leave out "What moved" when there are no measures, and the "Since" line when there is no `previous` or no count changed.
 
 ```
 *<department.name> Executive Brief* (as of <asOf>)
@@ -79,12 +82,13 @@ When the user wants to paste the brief into Slack, give this in a code block. Le
 • <title> (<delegateTo>, by <due>)
 
 <progressing> progressing, <stable> stable, <slipping> slipping
+Since <previous.asOf>: <count> <before> → <after>
 <brief.url>
 ```
 
 ## As a checklist
 
-When the user wants the list of changes, give this in a code block, one group per Function:
+When the user wants the list of changes, give this in a code block, one group per Function. An item with no `owner` is the `do` alone:
 
 ```
 <function>
