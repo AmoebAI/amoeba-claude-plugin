@@ -28,6 +28,7 @@ Amoeba tracks how an organization's business is going. Everything below is reach
 | Spaces the user can see | `list_spaces` (filter by `query`, page with `cursor`) |
 | One space in depth | `get_space` |
 | Analyses in a space | `list_explorations` with `spaceId`, then `get_exploration` for goals, insights and recommendations |
+| A department's Executive Brief | `get_department_brief`; the `department-brief` skill says how to present it |
 
 Every id comes from a previous result; never guess one. When pointing the user to an entity, share the `url` the tool returns.
 

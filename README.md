@@ -4,7 +4,7 @@ Marketplace of Claude plugins published by AmoebAI. The catalog is `.claude-plug
 
 | Plugin | What it does |
 | --- | --- |
-| [`amoeba`](plugins/amoeba) | The Amoeba AI connector plus a skill on how to read an organization through it. |
+| [`amoeba`](plugins/amoeba) | The Amoeba AI connector plus two skills: how to read an organization through it, and how to hand over a department's Executive Brief. |
 
 ## Adding the marketplace
 
