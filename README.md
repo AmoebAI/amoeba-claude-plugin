@@ -21,3 +21,7 @@ Each plugin keeps its own `.claude-plugin/plugin.json`; bump its `version` on ev
 claude plugin validate plugins/amoeba --strict
 claude plugin validate . --strict
 ```
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
